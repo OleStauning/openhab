@@ -1,40 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Product>
-	<Model>ZP3102</Model>
-	<Label lang="en">Motion Detector</Label>
-	<CommandClasses>
-		<Class><id>0x20</id></Class>
-		<Class><id>0x30</id></Class>
-		<Class><id>0x70</id></Class>
-		<Class><id>0x71</id></Class>
-		<Class><id>0x72</id></Class>
-		<Class><id>0x80</id></Class>
-		<Class><id>0x84</id></Class>
-		<Class><id>0x85</id></Class>
-		<Class><id>0x86</id></Class>
-	</CommandClasses>
+        <Model>ZP3102</Model>
+        <Label lang="en">Motion Detector</Label>
+        <CommandClasses>
 
-	<Configuration>
-		<Parameter>
-			<Index>1</Index>
-			<Type>short</Type>
-			<Minimum>1</Minimum>
-			<Maximum>255</Maximum>
-			<Default>3</Default>
-			<Size>1</Size>
-			<Label lang="en">On time in minutes</Label>
-			<Help lang="en">Delay before sending OFF</Help>
-		</Parameter>
-	</Configuration>
-	
-	<Associations>
-		<Group>
-			<Index>1</Index>
-			<Maximum>5</Maximum>
-			<Label lang="en">Control Command</Label>
-			<Help lang="en"><![CDATA[Control Command when trip]]></Help>
-			<SetToController>true</SetToController>
-		</Group>
-	</Associations>
+
+                <Class><id>0x59</id></Class>
+                <Class><id>0x85</id></Class>
+                <Class><id>0x20</id></Class>
+                <Class><id>0x80</id></Class>
+                <Class><id>0x70</id></Class>
+                <Class><id>0x5a</id></Class>
+                <Class><id>0x7a</id></Class>
+                <Class><id>0x72</id></Class>
+                <Class><id>0x71</id></Class>
+                <Class><id>0x73</id></Class>
+                <Class><id>0x98</id></Class>
+                <Class><id>0x31</id></Class>
+                <Class><id>0x86</id></Class>
+                <Class><id>0x84</id></Class>
+                <Class><id>0x5e</id></Class>
+
+        </CommandClasses>
+
+        <Configuration>
+                <Parameter>
+                        <Index>1</Index>
+                        <Type>short</Type>
+                        <Minimum>1</Minimum>
+                        <Maximum>255</Maximum>
+                        <Default>3</Default>
+                        <Size>1</Size>
+                        <Label lang="en">On time in minutes</Label>
+                        <Help lang="en">Delay before sending OFF</Help>
+                </Parameter>
+                <Parameter>
+                        <Index>2</Index>
+                        <Type>short</Type>
+                        <Minimum>0</Minimum>
+                        <Maximum>1</Maximum>
+                        <Default>0</Default>
+                        <Size>1</Size>
+                        <Label lang="en">Celcius or Farenheit</Label>
+                        <Help lang="en">C=0, F=1</Help>
+                </Parameter>
+                <Parameter>
+                        <Index>3</Index>
+                        <Type>short</Type>
+                        <Minimum>1</Minimum>
+                        <Maximum>7</Maximum>
+                        <Default>4</Default>
+                        <Size>1</Size>
+                        <Label lang="en">Sensitivity</Label>
+                        <Help lang="en">1=most sensitive</Help>
+                </Parameter>
+                <Parameter>
+                        <Index>4</Index>
+                        <Type>short</Type>
+                        <Minimum>-10</Minimum>
+                        <Maximum>10</Maximum>
+                        <Default>0</Default>
+                        <Size>1</Size>
+                        <Label lang="en">Celcius offset</Label>
+                        <Help lang="en">User defined offset</Help>
+                </Parameter>
+        </Configuration>
+
+        <Associations>
+                <Group>
+                        <Index>1</Index>
+                        <Maximum>5</Maximum>
+                        <Label lang="en">Control Command</Label>
+                        <Help lang="en"><![CDATA[Control Command when trip]]></Help>
+                        <SetToController>true</SetToController>
+                </Group>
+        </Associations>
 </Product>
-
